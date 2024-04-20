@@ -59,3 +59,108 @@ A bevitt adatokat a program hosszútávon tárolja, nem vesznek el a leállítá
 
 
 ## Terv
+
+### Objektumok és feladatkörök
+
+### Ido
+
+Az `Ido` objektum feladatköre a menetrendekben az idő tárolása.
+
+Tárolt adatai: óra, perc
+
+A `<<` operátor írja ki az időt a következő formátumban: `18:05`
+
+<p align="center">
+  <img src="./uml/Ido.png">
+</p>
+
+
+### Jegy
+
+A `Jegy` objektum a jegyek kezeléséért, tárolásáért, megjelenítésért felel.
+
+Tartalmazzon pointert a megfelelő vonatra, pointert a kezdő és cél állomásra, valamint egy Stringet a névhez. Ezen felül a helyjegy értelmében egy kocsi, illetve egy ülés számot is.
+
+A string dinmaikusan foglalt területen legyen.
+
+A print függvény írjon ki minden adatot a jegyről. (Név, vonat, cél-, végállomás, indulás, érkezés ideje.)
+
+<p align="center">
+  <img src="./uml/Jegy.png">
+</p>
+
+
+### Vonat
+
+A `Vonat` objektumban tárolom az azonosítóját, kapacitását (kocsik száma), illetve egy listát az érintett állomásokról. A redundancia elkerülése érdekében ezek legyenek pointerek.
+
+Ne legyen alap konstruktor, kötelező megadni azonosítót, kapacitást (ennek default értéke 3), valamit az állomásokat.
+
+Mivel az azonosító maximum 6 karakter hosszú lehet, nem kell dinamikusan tárolni.
+
+Legyen minden adattárolóhoz megfelelő getter és setter.
+
+A print() függvény írja ki a következő adatokat a megfelelő formában: [ ID | Kiinduló állomás: `állomás` | Végállomás: `végállomás` | Szabad helyek: `num` ]
+
+A `<<` operátor csak az azonosítót írja ki egy kapott os stream-re.
+
+A `-=` operátor a kapacitást csökkentse megfelelelő int-el.
+Ehhez természetesen csatolni kell a másoló konstruktort és operátort, a `-` és `--` operátorokat. Illetve eleganciából a `+` és `+=` operátorokat, bár ennek egyelőre nincs kimondott haszna. (Elgondolkodtató, hogy ezek inkább nevesített függvényként legyenek megvalósítva, a félreértések elkerülése végett)
+
+
+<p align="center">
+  <img src="./uml/Vonat.png">
+</p>
+
+
+### Allomas
+
+Az `Allomas` osztály feladata egy állomás és az abban közlekedő, az őt érintő menetrend kezelése.
+
+Az `==` operátor a pontos névegyezésre térjen vissza `true`-val, a `searchByName` pedig minimum 4 karakteres egyezéssel térjen vissza az egyezések számával.
+
+```cpp
+std::string nev;
+std::string keresett;
+
+ciklus keresett utolsó karakterétől 4-ig [j]:
+    ciklus 0-tól nev utolsó karakterig [i]:
+        HA keresett[0:j] == nev[i:i+j]:
+            return j;
+        EGYÉBKÉNT HA keresett[keresett.hossz-j:keresett.hossz] == nev[i:i+j]:
+            return j;
+    ciklus vége
+ciklus vége
+
+return 0;
+```
+
+
+<p align="center">
+  <img src="./uml/Allomas.png">
+</p>
+
+
+
+### Menetrend
+
+Legyen a `Menetrend` az állomásokon a vonatok indulásának kezelésért felelős.
+
+Az osztályban az indulás időpontját és az adott vonatra egy referenciát tároljon.
+
+Legyen egy print függvénye, ami kiírja az indulás időpontját, a vonat azonosítóját és az állomást.
+
+
+<p align="center">
+  <img src="./uml/Menetrend.png">
+</p>
+
+
+
+
+### UML
+
+
+<p align="center">
+  <img src="./uml/UML.png">
+</p>

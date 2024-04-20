@@ -367,7 +367,7 @@ code {
   </script>
 <h1 id="h%C3%A1zi-feladat">Házi feladat</h1>
 <h3 id="programoz%C3%A1s-alapjai-2">Programozás alapjai 2</h3>
-<h3 id="b%C3%A1nszky-kopp%C3%A1ny">Bánszky Koppány - KK4UWP</h3>
+<h3 id="b%C3%A1nszky-kopp%C3%A1ny---kk4uwp">Bánszky Koppány - KK4UWP</h3>
 <h1 id="vonatjegy">Vonatjegy</h1>
 <h2 id="feladat">Feladat</h2>
 <p>Tervezze meg egy vonatjegy eladó rendszer egyszerűsített objektummodelljét, majd valósítsa azt meg! A vonatjegy a feladatban mindig jegyet és helyjegyet jelent együtt. Így egy jegyen minimum a következőket kell feltüntetni:</p>
@@ -412,6 +412,66 @@ Valósítsa meg a jeggyel végezhető összes értelmes műveletet operátor át
 <h3 id="%C3%A1llom%C3%A1s-felv%C3%A9tele">Állomás felvétele</h3>
 <p>Az állomásfelvételekor csupán egy nevet kell megadni, amivel lehet az állomásra hivatkozni. Ha az adott név már létezik, jelezze a kimeneten és kérjen újat.</p>
 <p>A bevitt adatokat a program hosszútávon tárolja, nem vesznek el a leállítást követően.</p>
+<h2 id="terv">Terv</h2>
+<h3 id="objektumok-%C3%A9s-feladatk%C3%B6r%C3%B6k">Objektumok és feladatkörök</h3>
+<h3 id="ido">Ido</h3>
+<p>Az <code>Ido</code> objektum feladatköre a menetrendekben az idő tárolása.</p>
+<p>Tárolt adatai: óra, perc</p>
+<p>A <code>&lt;&lt;</code> operátor írja ki az időt a következő formátumban: <code>18:05</code></p>
+<p align="center">
+  <img src="./uml/Ido.png">
+</p>
+<h3 id="jegy">Jegy</h3>
+<p>A <code>Jegy</code> objektum a jegyek kezeléséért, tárolásáért, megjelenítésért felel.</p>
+<p>Tartalmazzon pointert a megfelelő vonatra, pointert a kezdő és cél állomásra, valamint egy Stringet a névhez. Ezen felül a helyjegy értelmében egy kocsi, illetve egy ülés számot is.</p>
+<p>A string dinmaikusan foglalt területen legyen.</p>
+<p>A print függvény írjon ki minden adatot a jegyről. (Név, vonat, cél-, végállomás, indulás, érkezés ideje.)</p>
+<p align="center">
+  <img src="./uml/Jegy.png">
+</p>
+<h3 id="vonat">Vonat</h3>
+<p>A <code>Vonat</code> objektumban tárolom az azonosítóját, kapacitását (kocsik száma), illetve egy listát az érintett állomásokról. A redundancia elkerülése érdekében ezek legyenek pointerek.</p>
+<p>Ne legyen alap konstruktor, kötelező megadni azonosítót, kapacitást (ennek default értéke 3), valamit az állomásokat.</p>
+<p>Mivel az azonosító maximum 6 karakter hosszú lehet, nem kell dinamikusan tárolni.</p>
+<p>Legyen minden adattárolóhoz megfelelő getter és setter.</p>
+<p>A print() függvény írja ki a következő adatokat a megfelelő formában: [ ID | Kiinduló állomás: <code>állomás</code> | Végállomás: <code>végállomás</code> | Szabad helyek: <code>num</code> ]</p>
+<p>A <code>&lt;&lt;</code> operátor csak az azonosítót írja ki egy kapott os stream-re.</p>
+<p>A <code>-=</code> operátor a kapacitást csökkentse megfelelelő int-el.
+Ehhez természetesen csatolni kell a másoló konstruktort és operátort, a <code>-</code> és <code>--</code> operátorokat. Illetve eleganciából a <code>+</code> és <code>+=</code> operátorokat, bár ennek egyelőre nincs kimondott haszna. (Elgondolkodtató, hogy ezek inkább nevesített függvényként legyenek megvalósítva, a félreértések elkerülése végett)</p>
+<p align="center">
+  <img src="./uml/Vonat.png">
+</p>
+<h3 id="allomas">Allomas</h3>
+<p>Az <code>Allomas</code> osztály feladata egy állomás és az abban közlekedő, az őt érintő menetrend kezelése.</p>
+<p>Az <code>==</code> operátor a pontos névegyezésre térjen vissza <code>true</code>-val, a <code>searchByName</code> pedig minimum 4 karakteres egyezéssel térjen vissza az egyezések számával.</p>
+<pre class="hljs"><code><div><span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> nev;
+<span class="hljs-built_in">std</span>::<span class="hljs-built_in">string</span> keresett;
+
+ciklus keresett utolsó karakterétől <span class="hljs-number">4</span>-ig [j]:
+    ciklus <span class="hljs-number">0</span>-tól nev utolsó karakterig [i]:
+        HA keresett[<span class="hljs-number">0</span>:j] == nev[i:i+j]:
+            <span class="hljs-keyword">return</span> j;
+        EGYÉBKÉNT HA keresett[keresett.hossz-j:keresett.hossz] == nev[i:i+j]:
+            <span class="hljs-keyword">return</span> j;
+    ciklus vége
+ciklus vége
+
+<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+</div></code></pre>
+<p align="center">
+  <img src="./uml/Allomas.png">
+</p>
+<h3 id="menetrend">Menetrend</h3>
+<p>Legyen a <code>Menetrend</code> az állomásokon a vonatok indulásának kezelésért felelős.</p>
+<p>Az osztályban az indulás időpontját és az adott vonatra egy referenciát tároljon.</p>
+<p>Legyen egy print függvénye, ami kiírja az indulás időpontját, a vonat azonosítóját és az állomást.</p>
+<p align="center">
+  <img src="./uml/Menetrend.png">
+</p>
+<h3 id="uml">UML</h3>
+<p align="center">
+  <img src="./uml/UML.png">
+</p>
 
 </body>
 </html>
