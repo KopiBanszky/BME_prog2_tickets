@@ -162,5 +162,5 @@ Legyen egy print függvénye, ami kiírja az indulás időpontját, a vonat azon
 
 
 <p align="center">
-  <img src="./uml/UML.png">
+  <img src="./uml/uml.png">
 </p>
