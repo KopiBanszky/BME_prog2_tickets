@@ -141,7 +141,7 @@ return 0;
 </p>
 
 
-
+<!-- 
 ### Menetrend
 
 Legyen a `Menetrend` az állomásokon a vonatok indulásának kezelésért felelős.
@@ -157,10 +157,4 @@ Legyen egy print függvénye, ami kiírja az indulás időpontját, a vonat azon
 
 
 
-
-### UML
-
-
-<p align="center">
-  <img src="./uml/UML.png">
-</p>
+ -->
