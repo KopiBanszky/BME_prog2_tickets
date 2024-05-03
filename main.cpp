@@ -1,6 +1,8 @@
 #include <iostream>
 #include "ido.h"
 
+//TODO: DELEGATE DEFINITIONS TO .CPP FILES
+
 int main() {
     std::cout << "Hello, World!" << std::endl;
 

@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Kopi/programok/BME/NHF/allomas.cpp" "CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj" "gcc" "CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj.d"
   "C:/Kopi/programok/BME/NHF/main.cpp" "CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj" "gcc" "CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj.d"
+  "C:/Kopi/programok/BME/NHF/test.cpp" "CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj" "gcc" "CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

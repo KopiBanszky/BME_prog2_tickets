@@ -80,12 +80,12 @@ clean: CMakeFiles/BME_prog2_tickets.dir/clean
 CMakeFiles/BME_prog2_tickets.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles --progress-num=1,2,3 "Built target BME_prog2_tickets"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4 "Built target BME_prog2_tickets"
 .PHONY : CMakeFiles/BME_prog2_tickets.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/BME_prog2_tickets.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/BME_prog2_tickets.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/BME_prog2_tickets.dir/rule

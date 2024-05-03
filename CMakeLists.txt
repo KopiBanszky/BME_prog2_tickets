@@ -10,4 +10,6 @@ add_executable(BME_prog2_tickets main.cpp
         vonat.h
         allomas.h
         list.h
-        allomas.cpp)
+        allomas.cpp
+        test.cpp
+        gtest_lite.h)
