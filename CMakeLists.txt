@@ -4,4 +4,10 @@ project(BME_prog2_tickets)
 set(CMAKE_CXX_STANDARD 11)
 
 add_executable(BME_prog2_tickets main.cpp
-        time.h)
+        ido.h
+        jegy.h
+        string.h
+        vonat.h
+        allomas.h
+        list.h
+        allomas.cpp)
