@@ -9,6 +9,7 @@ class Ido {
     int hour;
 
 public:
+    Ido() : hour(0), min(0) {}
     Ido(int hour, int min) : hour(hour), min(min) {}
     Ido(const Ido& other) : hour(other.hour), min(other.min) {}
     void setHour(int hour) { this->hour = hour; }

@@ -93,6 +93,16 @@ public:
         head = new Node{data, head};
     }
 
+    size_t len() {
+        size_t length = 0;
+        Node* current = head;
+        while (current != nullptr) {
+            length++;
+            current = current->next;
+        }
+        return length;
+    }
+
     void pop_front() {
         if (head == nullptr) {
             return;

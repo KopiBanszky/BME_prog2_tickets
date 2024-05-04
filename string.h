@@ -8,6 +8,12 @@ class String {
     char* data;
     size_t length;
 public:
+    String() {
+        length = 0;
+        data = new char[1];
+        data[0] = '\0';
+    }
+
     String(const char* str) {
         length = strlen(str);
         data = new char[length + 1];
@@ -58,6 +64,12 @@ public:
         strcpy(new_data, data);
         strcat(new_data, other);
         return String(new_data);
+    }
+    bool operator==(const String& other) const {
+        return strcmp(data, other.data) == 0;
+    }
+    bool operator==(const char* other) const {
+        return strcmp(data, other) == 0;
     }
 
     class iterator {
