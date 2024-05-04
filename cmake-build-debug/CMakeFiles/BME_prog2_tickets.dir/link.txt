@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -E rm -f CMakeFiles\BME_prog2_tickets.dir/objects.a
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc CMakeFiles\BME_prog2_tickets.dir/objects.a @CMakeFiles\BME_prog2_tickets.dir\objects1.rsp
+C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\C__~1.EXE -g -Wl,--whole-archive CMakeFiles\BME_prog2_tickets.dir/objects.a -Wl,--no-whole-archive -o BME_prog2_tickets.exe -Wl,--out-implib,libBME_prog2_tickets.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\BME_prog2_tickets.dir\linkLibs.rsp
