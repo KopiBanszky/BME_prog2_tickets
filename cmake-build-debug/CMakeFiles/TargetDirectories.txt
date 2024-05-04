@@ -1,3 +1,0 @@
-F:/Kopi/BME/prog2/BME_prog2_tickets/cmake-build-debug/CMakeFiles/BME_prog2_tickets.dir
-F:/Kopi/BME/prog2/BME_prog2_tickets/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/Kopi/BME/prog2/BME_prog2_tickets/cmake-build-debug/CMakeFiles/rebuild_cache.dir
