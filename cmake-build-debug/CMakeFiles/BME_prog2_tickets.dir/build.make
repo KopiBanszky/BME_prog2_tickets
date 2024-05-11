@@ -82,19 +82,51 @@ CMakeFiles/BME_prog2_tickets.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BME_prog2_tickets.dir/main.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\Kopi\BME\prog2\BME_prog2_tickets\main.cpp -o CMakeFiles\BME_prog2_tickets.dir\main.cpp.s
 
+CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/flags.make
+CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj: F:/Kopi/BME/prog2/BME_prog2_tickets/allomas.cpp
+CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Kopi\BME\prog2\BME_prog2_tickets\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj -MF CMakeFiles\BME_prog2_tickets.dir\allomas.cpp.obj.d -o CMakeFiles\BME_prog2_tickets.dir\allomas.cpp.obj -c F:\Kopi\BME\prog2\BME_prog2_tickets\allomas.cpp
+
+CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\Kopi\BME\prog2\BME_prog2_tickets\allomas.cpp > CMakeFiles\BME_prog2_tickets.dir\allomas.cpp.i
+
+CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\Kopi\BME\prog2\BME_prog2_tickets\allomas.cpp -o CMakeFiles\BME_prog2_tickets.dir\allomas.cpp.s
+
+CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/flags.make
+CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj: F:/Kopi/BME/prog2/BME_prog2_tickets/test.cpp
+CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=F:\Kopi\BME\prog2\BME_prog2_tickets\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj -MF CMakeFiles\BME_prog2_tickets.dir\test.cpp.obj.d -o CMakeFiles\BME_prog2_tickets.dir\test.cpp.obj -c F:\Kopi\BME\prog2\BME_prog2_tickets\test.cpp
+
+CMakeFiles/BME_prog2_tickets.dir/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BME_prog2_tickets.dir/test.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E F:\Kopi\BME\prog2\BME_prog2_tickets\test.cpp > CMakeFiles\BME_prog2_tickets.dir\test.cpp.i
+
+CMakeFiles/BME_prog2_tickets.dir/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BME_prog2_tickets.dir/test.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\C__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S F:\Kopi\BME\prog2\BME_prog2_tickets\test.cpp -o CMakeFiles\BME_prog2_tickets.dir\test.cpp.s
+
 # Object files for target BME_prog2_tickets
 BME_prog2_tickets_OBJECTS = \
-"CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj"
+"CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj" \
+"CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj" \
+"CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj"
 
 # External object files for target BME_prog2_tickets
 BME_prog2_tickets_EXTERNAL_OBJECTS =
 
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj
+BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj
+BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/build.make
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/linkLibs.rsp
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/objects1.rsp
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\Kopi\BME\prog2\BME_prog2_tickets\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable BME_prog2_tickets.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=F:\Kopi\BME\prog2\BME_prog2_tickets\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable BME_prog2_tickets.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BME_prog2_tickets.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

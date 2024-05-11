@@ -1,6 +1,10 @@
 #include <iostream>
+#include "test.hpp"
+
+//TODO: DELEGATE DEFINITIONS TO .CPP FILES
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    run_tests();
+
     return 0;
 }

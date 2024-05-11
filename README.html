@@ -378,7 +378,7 @@ code {
 </ul>
 <p>A rendszerrel minimum a következő műveleteket kívánjuk elvégezni:</p>
 <ul>
-<li>vonatok felvétele</li>
+<li>trains felvétele</li>
 <li>jegy kiadása</li>
 </ul>
 <p>A rendszer később lehet bővebb funkcionalitású (pl. késések kezelése, vonat törlése, menetrend, stb.), ezért nagyon fontos, hogy jól határozza meg az objektumokat és azok felelősségét.
@@ -402,7 +402,7 @@ Valósítsa meg a jeggyel végezhető összes értelmes műveletet operátor át
 <li>Választás után a bemenetre kérjen egy teljes nevet, majd minden paraméterével mutassa meg a jegyet a kimenet. Helyet sorsol, viszont ha a vonat megtelt, jelzi azt a kimeneten.</li>
 </ol>
 <h3 id="vonat-felv%C3%A9tele">Vonat felvétele</h3>
-<p>A vonatok felvétele a következőképp zajlik:</p>
+<p>A trains felvétele a következőképp zajlik:</p>
 <ol>
 <li>A menüben meg kell adni egy vonat azonosítót, amely maximum 6 karaktert tartalmazhat.</li>
 <li>Ezután meg kell adni hány kocsival fog közlekedni az adott járat. (Egy kocsi általánosítva 35 fővel bír.)</li>
@@ -461,16 +461,10 @@ ciklus vége
 <p align="center">
   <img src="./uml/Allomas.png">
 </p>
-<!-- 
-### Menetrend
-
-Legyen a `Menetrend` az állomásokon a vonatok indulásának kezelésért felelős.
-
-Az osztályban az indulás időpontját és az adott vonatra egy referenciát tároljon.
-
-Legyen egy print függvénye, ami kiírja az indulás időpontját, a vonat azonosítóját és az állomást.
-
-
+<h3 id="menetrend">Menetrend</h3>
+<p>Legyen a <code>Menetrend</code> az állomásokon a vonatok indulásának kezelésért felelős.</p>
+<p>Az osztályban az indulás időpontját és az adott vonatra egy referenciát tároljon.</p>
+<p>Legyen egy print függvénye, ami kiírja az indulás időpontját, a vonat azonosítóját és az állomást.</p>
 <p align="center">
   <img src="./uml/Menetrend.png">
 </p>

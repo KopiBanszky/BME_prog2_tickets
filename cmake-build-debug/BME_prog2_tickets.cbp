@@ -80,10 +80,34 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/allomas.cpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/allomas.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/gtest_lite.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/ido.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/jegy.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/list.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
 		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/main.cpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
-		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/time.h">
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/string.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/test.cpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/vonat.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/CMakeLists.txt">

@@ -16,7 +16,7 @@ Tervezze meg egy vonatjegy eladó rendszer egyszerűsített objektummodelljét, 
 
 A rendszerrel minimum a következő műveleteket kívánjuk elvégezni:
 
-- vonatok felvétele  
+- trains felvétele  
 - jegy kiadása  
 
 A rendszer később lehet bővebb funkcionalitású (pl. késések kezelése, vonat törlése, menetrend, stb.), ezért nagyon fontos, hogy jól határozza meg az objektumokat és azok felelősségét.
@@ -44,7 +44,7 @@ A jegyvásárlás menüponton belül az alábbi működés legyen érvényes:
 
 ### Vonat felvétele
 
-A vonatok felvétele a következőképp zajlik:
+A trains felvétele a következőképp zajlik:
 
 1. A menüben meg kell adni egy vonat azonosítót, amely maximum 6 karaktert tartalmazhat.
 1. Ezután meg kell adni hány kocsival fog közlekedni az adott járat. (Egy kocsi általánosítva 35 fővel bír.)
@@ -144,7 +144,7 @@ return 0;
 <!-- 
 ### Menetrend
 
-Legyen a `Menetrend` az állomásokon a vonatok indulásának kezelésért felelős.
+Legyen a `Menetrend` az állomásokon a trains indulásának kezelésért felelős.
 
 Az osztályban az indulás időpontját és az adott vonatra egy referenciát tároljon.
 

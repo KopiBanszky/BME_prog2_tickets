@@ -11,6 +11,6 @@
 -- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2023.2.2/bin/mingw/bin/c++.exe - skipped
 -- Detecting CXX compile features
 -- Detecting CXX compile features - done
--- Configuring done (62.4s)
+-- Configuring done (73.0s)
 -- Generating done (0.0s)
 -- Build files have been written to: F:/Kopi/BME/prog2/BME_prog2_tickets/cmake-build-debug

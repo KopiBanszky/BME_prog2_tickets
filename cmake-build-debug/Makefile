@@ -128,6 +128,30 @@ BME_prog2_tickets/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/build
 .PHONY : BME_prog2_tickets/fast
 
+allomas.obj: allomas.cpp.obj
+.PHONY : allomas.obj
+
+# target to build an object file
+allomas.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj
+.PHONY : allomas.cpp.obj
+
+allomas.i: allomas.cpp.i
+.PHONY : allomas.i
+
+# target to preprocess a source file
+allomas.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.i
+.PHONY : allomas.cpp.i
+
+allomas.s: allomas.cpp.s
+.PHONY : allomas.s
+
+# target to generate assembly for a file
+allomas.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.s
+.PHONY : allomas.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -152,6 +176,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test.obj: test.cpp.obj
+.PHONY : test.obj
+
+# target to build an object file
+test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj
+.PHONY : test.cpp.obj
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/test.cpp.s
+.PHONY : test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -161,9 +209,15 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... BME_prog2_tickets
+	@echo ... allomas.obj
+	@echo ... allomas.i
+	@echo ... allomas.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... test.obj
+	@echo ... test.i
+	@echo ... test.s
 .PHONY : help
 
 
