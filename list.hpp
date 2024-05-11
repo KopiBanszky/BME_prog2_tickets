@@ -1,5 +1,5 @@
-#ifndef BME_PROG2_TICKETS_LIST_H
-#define BME_PROG2_TICKETS_LIST_H
+#ifndef BME_PROG2_TICKETS_LIST_HPP
+#define BME_PROG2_TICKETS_LIST_HPP
 
 #include <iostream>
 
@@ -127,12 +127,69 @@ public:
     }
 
     // @brief Removes the last element of the list
-    void pop(){}
+    void pop() {
+        if (head == nullptr) {
+            return;
+        }
+
+        if (head->next == nullptr) {
+            delete head;
+            head = nullptr;
+            return;
+        }
+
+        Node* current = head;
+        while (current->next->next != nullptr) {
+            current = current->next;
+        }
+
+        delete current->next;
+        current->next = nullptr;
+    
+    };
 
     // @brief Removes the first occurrence of the given element
     // @param data element to be removed
-    void pop(const T& data) {}
+    void pop(const T& data) {
+        if (head == nullptr) {
+            return;
+        }
 
+        if (head->data == data) {
+            pop_front();
+            return;
+        }
+
+        Node* current = head;
+        while (current->next != nullptr && current->next->data != data) {
+            current = current->next;
+        }
+
+        if (current->next == nullptr) {
+            return;
+        }
+
+        Node* temp = current->next;
+        current->next = current->next->next;
+        delete temp;
+    
+    };
+
+    void pop(size_t index) {
+        if (index == 0) {
+            pop_front();
+            return;
+        }
+
+        Node* current = head;
+        for (size_t i = 0; i < index - 1; i++) {
+            current = current->next;
+        }
+
+        Node* temp = current->next;
+        current->next = current->next->next;
+        delete temp;
+    }
 
     // @brief gives the first element of the list
     // @return first element
@@ -145,6 +202,29 @@ public:
     iterator end() {
         return {nullptr};
     }
+
+    // @brief indexer operator
+    // @param index index of the element
+    // @return element at the given index
+    T& operator[](size_t index) {
+        Node* current = head;
+        for (size_t i = 0; i < index; i++) {
+            current = current->next;
+        }
+        return current->data;
+    
+    };
+
+    // @brief indexer operator
+    // @param index index of the element
+    // @return element at the given index
+    T& operator[](size_t index) const {
+        Node* current = head;
+        for (size_t i = 0; i < index; i++) {
+            current = current->next;
+        }
+        return current->data;
+    };
 };
 
-#endif //BME_PROG2_TICKETS_LIST_H
+#endif //BME_PROG2_TICKETS_LIST_HPP

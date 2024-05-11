@@ -152,6 +152,30 @@ allomas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.s
 .PHONY : allomas.cpp.s
 
+ido.obj: ido.cpp.obj
+.PHONY : ido.obj
+
+# target to build an object file
+ido.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj
+.PHONY : ido.cpp.obj
+
+ido.i: ido.cpp.i
+.PHONY : ido.i
+
+# target to preprocess a source file
+ido.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/ido.cpp.i
+.PHONY : ido.cpp.i
+
+ido.s: ido.cpp.s
+.PHONY : ido.s
+
+# target to generate assembly for a file
+ido.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/ido.cpp.s
+.PHONY : ido.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -176,29 +200,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-test.obj: test.cpp.obj
-.PHONY : test.obj
+vonat.obj: vonat.cpp.obj
+.PHONY : vonat.obj
 
 # target to build an object file
-test.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj
-.PHONY : test.cpp.obj
+vonat.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj
+.PHONY : vonat.cpp.obj
 
-test.i: test.cpp.i
-.PHONY : test.i
+vonat.i: vonat.cpp.i
+.PHONY : vonat.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/test.cpp.i
-.PHONY : test.cpp.i
+vonat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.i
+.PHONY : vonat.cpp.i
 
-test.s: test.cpp.s
-.PHONY : test.s
+vonat.s: vonat.cpp.s
+.PHONY : vonat.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/test.cpp.s
-.PHONY : test.cpp.s
+vonat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.s
+.PHONY : vonat.cpp.s
 
 # Help Target
 help:
@@ -212,12 +236,15 @@ help:
 	@echo ... allomas.obj
 	@echo ... allomas.i
 	@echo ... allomas.s
+	@echo ... ido.obj
+	@echo ... ido.i
+	@echo ... ido.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... test.obj
-	@echo ... test.i
-	@echo ... test.s
+	@echo ... vonat.obj
+	@echo ... vonat.i
+	@echo ... vonat.s
 .PHONY : help
 
 

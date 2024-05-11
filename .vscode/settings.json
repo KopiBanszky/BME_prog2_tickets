@@ -5,6 +5,8 @@
         "regex": "cpp",
         "vector": "cpp",
         "xstring": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "iomanip": "cpp",
+        "fstream": "cpp"
     }
 }

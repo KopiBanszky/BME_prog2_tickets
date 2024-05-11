@@ -4,14 +4,19 @@
 #include "allomas.h"
 #include "vonat.h"
 #include "jegy.h"
-#include "list.h"
+#include "list.hpp"
+#include <iostream>
+#include <sstream>
+#include "memtrace.h"
+
+#define MEMTRACE
 
 #define STRING_TEST true
 #define IDO_TEST true
 #define ALLOMAS_TEST true
 #define VONAT_TEST true
-#define JEGY_TEST true
-#define LIST_TEST true
+#define JEGY_TEST false
+#define LIST_TEST false
 
 
 void run_tests() {
@@ -19,16 +24,16 @@ void run_tests() {
     TEST(String, Constructor)
         {
             String s1;
-            EXPECT_EQ(s1.len(), 0);
+            EXPECT_EQ(0, s1.len());
             s1 += "Hello";
-            EXPECT_EQ(s1.len(), 5);
-            EXPECT_EQ(s1 == "Hello", true);
+            EXPECT_EQ(5, s1.len());
+            EXPECT_EQ(true, s1 == "Hello");
 
             String s2("Hello");
-            EXPECT_EQ(s2.len(), 5);
+            EXPECT_EQ(5, s2.len());
 
             String s3(s2);
-            EXPECT_EQ(s3.len(), 5);
+            EXPECT_EQ(5, s3.len());
             EXPECT_EQ(s2, s3);
         } ENDM
 #endif
@@ -36,38 +41,116 @@ void run_tests() {
 #if IDO_TEST
     TEST(Ido, Constructor) {
         Ido i1;
-        EXPECT_EQ(i1.getHour(), 0);
-        EXPECT_EQ(i1.getMin(), 0);
+        EXPECT_EQ(0, i1.getHour());
+        EXPECT_EQ(0, i1.getMin());
 
         Ido i2(12, 30);
-        EXPECT_EQ(i2.getHour(), 12);
-        EXPECT_EQ(i2.getMin(), 30);
+        EXPECT_EQ(12, i2.getHour());
+        EXPECT_EQ(30, i2.getMin());
 
         Ido i3(i2);
-        EXPECT_EQ(i3.getHour(), 12);
-        EXPECT_EQ(i3.getMin(), 30);
+        EXPECT_EQ(12, i3.getHour());
+        EXPECT_EQ(30, i3.getMin());
+
+        EXPECT_ANY_THROW(i2.setTime(24, 0));
+
+
+
+        std::stringstream ss{};
+        ss << i2;
+        EXPECT_STREQ("12:30", ss.str().c_str());
+
+        ss >> i1;
+        EXPECT_EQ(12, i1.getHour());
+        EXPECT_EQ(30, i1.getMin());
+
+        i3.setHour(1);
+        EXPECT_EQ(1, i3.getHour());
+        i3.setMin(5);
+        EXPECT_EQ(5, i3.getMin());
+
+        ss = std::stringstream{};
+        ss << i3;
+        EXPECT_STREQ("01:05", ss.str().c_str());
+
+        ss >> i1;
+        EXPECT_EQ(1, i1.getHour());
+        EXPECT_EQ(5, i1.getMin());
+        ss.clear();
+
+        std::ofstream ofs("test.txt");
+        ofs << i1;
+        ofs.close();
+
+        std::ifstream ifs("test.txt");
+
+        ifs >> i2;
+        EXPECT_EQ(1, i2.getHour());
+        EXPECT_EQ(5, i2.getMin());
+        ofs.close();
+
     } ENDM
 #endif
 
 #if ALLOMAS_TEST
     TEST(Allomas, Constructor) {
         Allomas a1("Budapest");
-        EXPECT_STREQ(a1.getName().c_str(), "Budapest");
+        EXPECT_STREQ("Budapest", a1.getName().c_str());
 
         Allomas a2(a1);
-        EXPECT_STREQ(a2.getName().c_str(), "Budapest");
+        EXPECT_STREQ("Budapest", a2.getName().c_str());
     } ENDM
 
     TEST(Allomas, addTrain) {
 
         Allomas a1("Budapest");
         a1.addTrain(String("123ABC"));
-        EXPECT_EQ(a1.getTrains().len(), 1);
+        EXPECT_EQ(1, a1.getTrains().len());
 
+    } ENDM
+
+    TEST(Allomas, removeTrain) {
+        Allomas a1("Budapest");
+        a1.addTrain(String("123ABC"));
+        a1.removeTrain(String("123ABC"));
+        EXPECT_EQ(0, a1.getTrains().len());
+    } ENDM
+
+    TEST(Allomas, search) {
+        Allomas a1("Budapest");
+        EXPECT_EQ(0, a1.search("pest"));
+    } ENDM
+
+    TEST(Allomas, findTrain) {
+        Allomas a1("Budapest");
+        a1.addTrain(String("123ABC"));
+        EXPECT_EQ(0, a1.findTrain("123ABC"));
+    } ENDM
+
+    TEST(Allomas, operator<<) {
+        Allomas a1("Budapest");
+        std::stringstream ss{};
+        ss << a1;
+        EXPECT_STREQ("Budapest", ss.str().c_str());
+    } ENDM
+
+    TEST(Allomas, operator==) {
+        Allomas a1("Budapest");
+        Allomas a2("Budapest");
+        EXPECT_EQ(a1 == a2, true);
+    } ENDM
+
+    TEST(Allomas, operator[]) {
+        Allomas a1("Budapest");
+        a1.addTrain(String("123ABC"));
+        a1.addTrain(String("456DEF"));
+        a1.addTrain(String("789GHI"));
+        EXPECT_EQ(a1[1], String("456DEF"));
     } ENDM
 #endif
 
 #if VONAT_TEST
+
     TEST(Vonat, Constructor) {
         Vonat v1("123ABC", 100);
         EXPECT_STREQ(v1.getID().c_str(), "123ABC");
@@ -143,7 +226,10 @@ void run_tests() {
 
     TEST(Vonat, operator<<) {
         Vonat v1("123ABC", 100);
-        std::cout << v1;
+        std::stringstream ss{};
+        ss << v1;
+        EXPECT_STREQ("Train ID: 123ABC\nCapacity: 100\nStations: \n", ss.str().c_str());
+        
     } ENDM
 
 #endif

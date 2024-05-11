@@ -5,11 +5,11 @@
 
 #include "ido.h"
 #include "string.h"
-#include "list.h"
+#include "list.hpp"
 #include "allomas.h"
 
 
-class Vonat {
+class Vonat{
     String ID; //max length 6
     int capacity;
     List<Allomas> stations;
@@ -17,8 +17,8 @@ class Vonat {
 
 public:
     // @brief Constructor, sets the ID and the capacity. Stations and departures are empty.
-    //TODO: limit ID length to 6
-    Vonat(String ID, int capacity) : ID(ID), capacity(capacity) {}
+    Vonat(String ID, int capacity);
+    Vonat(char const* ID, int capacity);
     Vonat(const Vonat& other) : ID(other.ID), capacity(other.capacity), stations(other.stations), departures(other.departures) {}
 
     // @brief Getter function for the ID of the train
@@ -31,7 +31,7 @@ public:
 
     // @brief Setter function for the ID of the train
     // @param ID ID of the train (String)
-    void setID(const String& ID) { this->ID = ID; } //TODO: limit length to 6
+    void setID(const String& ID);
 
     // @brief Setter function for the capacity of the train
     // @param capacity capacity of the train (int)
@@ -40,16 +40,16 @@ public:
     // @brief Adds a station to the list of stations and a departure time to the list of departures. Both are added to the end of the lists.
     // @param station station to add (Allomas)
     // @param departure departure time to add (Ido)
-    void addStation(const Allomas& station, const Ido& departure) {  }
+    void addStation(const Allomas& station, const Ido& departure);
 
     // @brief Removes a station from the list of stations and the corresponding departure time from the list of departures.
     // @param station station to remove (Allomas)
-    void removeStation(const Allomas& station) {} //TODO: remove departure time as well
+    void removeStation(const Allomas& station);
 
     // @brief Searches for a station in the list of stations
     // @param station station to search for Allomas by name
     // @return true if the station is in the list, false otherwise
-    bool isStationIn(const Allomas& station) const {return false; }
+    bool isStationIn(const Allomas& station) const;
 
     // @brief getter function for the list of stations
     // @return list of stations (List<Allomas>)

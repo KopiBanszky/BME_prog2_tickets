@@ -73,36 +73,51 @@ public:
     // @brief adds two strings, the rhs is added to the end of the lhs
     // @param other string to add
     // @return new string
-    String operator+=(const String& other) const {
+    String& operator+=(const String& other) {
         size_t new_length = length + other.length;
-        char* new_data = new char[new_length + 1];
-        strcpy(new_data, data);
-        strcat(new_data, other.data);
-        return String(new_data);
+        char* newStr = new char[new_length + 1];
+        strcpy(newStr, data);
+        strcat(newStr, other.data);
+
+        length = new_length;
+        delete[] data;
+        data = newStr;
+
+        return *this;
     }
 
     // @brief adds a string to the end of the current string
     // @param other string to add
     // @return new string
-    String operator+=(const char* other) const {
+    String& operator+=(const char* other) {
         size_t other_length = strlen(other);
         size_t new_length = length + other_length;
         char* new_data = new char[new_length + 1];
         strcpy(new_data, data);
         strcat(new_data, other);
-        return String(new_data);
+
+        length = new_length;
+        delete[] data;
+        data = new_data;
+
+        return *this;
     }
 
     // @brief adds a character to the end of the current string
     // @param c character to add
     // @return new string
-    String operator+=(char c) const {
+    String operator+=(char c) {
         size_t new_length = length + 1;
         char* new_data = new char[new_length + 1];
         strcpy(new_data, data);
         new_data[new_length - 1] = c;
         new_data[new_length] = '\0';
-        return String(new_data);
+
+        length = new_length;
+        delete[] data;
+        data = new_data;
+
+        return *this;
     }
 
     // @brief compares two strings
@@ -119,10 +134,31 @@ public:
         return strcmp(data, other) == 0;
     }
 
+    // @brief compares two strings
+    // @param other string to compare
+    // @return true if the strings are not equal, false otherwise
+    bool operator!=(const String& other) const {
+        return !(*this == other);
+    }
+
+    // @brief compares a string to a char array
+    // @param other char array to compare
+    // @return true if the strings are not equal, false otherwise
+    bool operator!=(const char* other) const {
+        return !(*this == other);
+    }
+
     // @brief index operator
     // @param index index of the character
     // @return character at the given index
     char operator[](size_t index) const {
+        return data[index];
+    }
+
+    // @brief index operator
+    // @param index index of the character
+    // @return character at the given index
+    char operator[](size_t index) {
         return data[index];
     }
 

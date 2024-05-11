@@ -89,13 +89,16 @@
 		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/gtest_lite.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/ido.cpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
 		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/ido.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/jegy.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
-		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/list.h">
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/list.hpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/main.cpp">
@@ -104,7 +107,10 @@
 		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/string.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
-		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/test.cpp">
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/test.hpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/vonat.cpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="F:/Kopi/BME/prog2/BME_prog2_tickets/vonat.h">
