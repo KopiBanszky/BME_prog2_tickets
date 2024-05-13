@@ -2,7 +2,7 @@
 #define BME_PROG2_TICKETS_ALLOMAS_H
 
 #include "vonat.h"
-#include "list.h"
+#include "list.hpp"
 
 
 class Allomas {
@@ -27,6 +27,10 @@ public:
     friend std::ostream& operator<<(std::ostream& os, const Allomas& allomas) {
         os << allomas.getName();
         return os;
+    }
+
+    bool operator==(const Allomas& other) const {
+        return name == other.name;
     }
 
 };

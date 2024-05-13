@@ -91,6 +91,9 @@
 		<Unit filename="C:/Kopi/programok/BME/NHF/gtest_lite.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/ido.cpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/ido.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
@@ -100,13 +103,28 @@
 		<Unit filename="C:/Kopi/programok/BME/NHF/list.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/list.hpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/main.cpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/memtrace.cpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/memtrace.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/string.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/test.cpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/test.hpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/vonat.cpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/vonat.h">

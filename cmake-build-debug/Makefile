@@ -152,6 +152,30 @@ allomas.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.s
 .PHONY : allomas.cpp.s
 
+ido.obj: ido.cpp.obj
+.PHONY : ido.obj
+
+# target to build an object file
+ido.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj
+.PHONY : ido.cpp.obj
+
+ido.i: ido.cpp.i
+.PHONY : ido.i
+
+# target to preprocess a source file
+ido.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/ido.cpp.i
+.PHONY : ido.cpp.i
+
+ido.s: ido.cpp.s
+.PHONY : ido.s
+
+# target to generate assembly for a file
+ido.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/ido.cpp.s
+.PHONY : ido.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -175,6 +199,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+memtrace.obj: memtrace.cpp.obj
+.PHONY : memtrace.obj
+
+# target to build an object file
+memtrace.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj
+.PHONY : memtrace.cpp.obj
+
+memtrace.i: memtrace.cpp.i
+.PHONY : memtrace.i
+
+# target to preprocess a source file
+memtrace.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.i
+.PHONY : memtrace.cpp.i
+
+memtrace.s: memtrace.cpp.s
+.PHONY : memtrace.s
+
+# target to generate assembly for a file
+memtrace.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.s
+.PHONY : memtrace.cpp.s
 
 test.obj: test.cpp.obj
 .PHONY : test.obj
@@ -200,6 +248,30 @@ test.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/test.cpp.s
 .PHONY : test.cpp.s
 
+vonat.obj: vonat.cpp.obj
+.PHONY : vonat.obj
+
+# target to build an object file
+vonat.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj
+.PHONY : vonat.cpp.obj
+
+vonat.i: vonat.cpp.i
+.PHONY : vonat.i
+
+# target to preprocess a source file
+vonat.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.i
+.PHONY : vonat.cpp.i
+
+vonat.s: vonat.cpp.s
+.PHONY : vonat.s
+
+# target to generate assembly for a file
+vonat.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\BME_prog2_tickets.dir\build.make CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.s
+.PHONY : vonat.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -212,12 +284,21 @@ help:
 	@echo ... allomas.obj
 	@echo ... allomas.i
 	@echo ... allomas.s
+	@echo ... ido.obj
+	@echo ... ido.i
+	@echo ... ido.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... memtrace.obj
+	@echo ... memtrace.i
+	@echo ... memtrace.s
 	@echo ... test.obj
 	@echo ... test.i
 	@echo ... test.s
+	@echo ... vonat.obj
+	@echo ... vonat.i
+	@echo ... vonat.s
 .PHONY : help
 
 

@@ -110,11 +110,56 @@ CMakeFiles/BME_prog2_tickets.dir/test.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BME_prog2_tickets.dir/test.cpp.s"
 	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Kopi\programok\BME\NHF\test.cpp -o CMakeFiles\BME_prog2_tickets.dir\test.cpp.s
 
+CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/flags.make
+CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj: C:/Kopi/programok/BME/NHF/ido.cpp
+CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj -MF CMakeFiles\BME_prog2_tickets.dir\ido.cpp.obj.d -o CMakeFiles\BME_prog2_tickets.dir\ido.cpp.obj -c C:\Kopi\programok\BME\NHF\ido.cpp
+
+CMakeFiles/BME_prog2_tickets.dir/ido.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BME_prog2_tickets.dir/ido.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Kopi\programok\BME\NHF\ido.cpp > CMakeFiles\BME_prog2_tickets.dir\ido.cpp.i
+
+CMakeFiles/BME_prog2_tickets.dir/ido.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BME_prog2_tickets.dir/ido.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Kopi\programok\BME\NHF\ido.cpp -o CMakeFiles\BME_prog2_tickets.dir\ido.cpp.s
+
+CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/flags.make
+CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj: C:/Kopi/programok/BME/NHF/memtrace.cpp
+CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj -MF CMakeFiles\BME_prog2_tickets.dir\memtrace.cpp.obj.d -o CMakeFiles\BME_prog2_tickets.dir\memtrace.cpp.obj -c C:\Kopi\programok\BME\NHF\memtrace.cpp
+
+CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Kopi\programok\BME\NHF\memtrace.cpp > CMakeFiles\BME_prog2_tickets.dir\memtrace.cpp.i
+
+CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Kopi\programok\BME\NHF\memtrace.cpp -o CMakeFiles\BME_prog2_tickets.dir\memtrace.cpp.s
+
+CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/flags.make
+CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj: C:/Kopi/programok/BME/NHF/vonat.cpp
+CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj: CMakeFiles/BME_prog2_tickets.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj -MF CMakeFiles\BME_prog2_tickets.dir\vonat.cpp.obj.d -o CMakeFiles\BME_prog2_tickets.dir\vonat.cpp.obj -c C:\Kopi\programok\BME\NHF\vonat.cpp
+
+CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.i"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Kopi\programok\BME\NHF\vonat.cpp > CMakeFiles\BME_prog2_tickets.dir\vonat.cpp.i
+
+CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.s"
+	C:\PROGRA~1\JETBRA~1\CLION2~1.3\bin\mingw\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Kopi\programok\BME\NHF\vonat.cpp -o CMakeFiles\BME_prog2_tickets.dir\vonat.cpp.s
+
 # Object files for target BME_prog2_tickets
 BME_prog2_tickets_OBJECTS = \
 "CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj" \
 "CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj" \
-"CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj"
+"CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj" \
+"CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj" \
+"CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj" \
+"CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj"
 
 # External object files for target BME_prog2_tickets
 BME_prog2_tickets_EXTERNAL_OBJECTS =
@@ -122,11 +167,14 @@ BME_prog2_tickets_EXTERNAL_OBJECTS =
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/allomas.cpp.obj
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/test.cpp.obj
+BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj
+BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj
+BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/vonat.cpp.obj
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/build.make
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/linkLibs.rsp
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/objects1.rsp
 BME_prog2_tickets.exe: CMakeFiles/BME_prog2_tickets.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable BME_prog2_tickets.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Kopi\programok\BME\NHF\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable BME_prog2_tickets.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\BME_prog2_tickets.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -4,7 +4,7 @@
 #include "allomas.h"
 #include "vonat.h"
 #include "jegy.h"
-#include "list.h"
+#include "list.hpp"
 
 #define STRING_TEST true
 #define IDO_TEST true
