@@ -8,6 +8,9 @@ CMake Deprecation Warning:
   use the cmake-file-api(7) to view CMake-generated project build trees.
 
 
--- Configuring done (0.1s)
--- Generating done (0.0s)
--- Build files have been written to: C:/Kopi/programok/BME/NHF/cmake-build-debug
+CMake Error at CMakeLists.txt:22:
+  Parse error.  Expected a command name, got unquoted argument with text
+  "=======".
+
+
+-- Configuring incomplete, errors occurred!
