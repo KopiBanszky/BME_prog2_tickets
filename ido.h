@@ -4,6 +4,7 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include "string.h"
 
 class Ido {
     int hour;
@@ -14,6 +15,7 @@ public:
     Ido() : hour(0), min(0) {}
     Ido(int hour, int min) : hour(hour), min(min) {}
     Ido(const Ido& other) : hour(other.hour), min(other.min) {}
+    Ido(String str);
 
     // @brief sets the hour
     // @param hour (int)

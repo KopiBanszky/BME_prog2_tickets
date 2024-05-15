@@ -1,0 +1,3 @@
+C:/Kopi/programok/BME/NHF/cmake-build-debug/CMakeFiles/BME_prog2_tickets.dir
+C:/Kopi/programok/BME/NHF/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Kopi/programok/BME/NHF/cmake-build-debug/CMakeFiles/rebuild_cache.dir

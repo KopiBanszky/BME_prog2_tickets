@@ -10,11 +10,16 @@ add_executable(BME_prog2_tickets main.cpp
         vonat.h
         allomas.h
         allomas.cpp
-        test.cpp
         gtest_lite.h
         ido.cpp
         list.hpp
         memtrace.cpp
         memtrace.h
         test.hpp
-        vonat.cpp)
+        vonat.cpp
+        menu.h
+        allomas_kezeles.h
+        seriazible.h
+        jegy.cpp
+        string.cpp
+        vonat_kezeles.h)

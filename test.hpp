@@ -8,6 +8,7 @@
 #include <iostream>
 #include <sstream>
 #include "memtrace.h"
+#include "menu.h"
 
 #define MEMTRACE
 
@@ -15,8 +16,11 @@
 #define IDO_TEST true
 #define ALLOMAS_TEST true
 #define VONAT_TEST true
-#define JEGY_TEST false
+#define JEGY_TEST true
 #define LIST_TEST false
+#define MENU_TEST true
+
+//#define CPORTA
 
 
 void run_tests() {
@@ -35,6 +39,51 @@ void run_tests() {
             String s3(s2);
             EXPECT_EQ(5, s3.len());
             EXPECT_EQ(s2, s3);
+
+            s3 = "World";
+            EXPECT_EQ(5, s3.len());
+            EXPECT_EQ(true, s3 == "World");
+
+            s3 = s2;
+            EXPECT_EQ(5, s3.len());
+            EXPECT_EQ(true, s3 == "Hello");
+
+            std::stringstream ss{};
+            ss << s3;
+            EXPECT_STREQ("Hello", ss.str().c_str());
+            ss << '_';
+            ss << "World";
+            EXPECT_STREQ("Hello_World", ss.str().c_str());
+
+            ss >> s3;
+            EXPECT_EQ(11, s3.len());
+            EXPECT_EQ(true, s3 == "Hello_World");
+
+            List<String> l1 = s3.split('_');
+            EXPECT_EQ(2, l1.len());
+            EXPECT_EQ(true, l1[0] == "Hello");
+            EXPECT_EQ(String("World"), l1[1]);
+
+            std::ofstream ofs("test.txt", std::ios::app);
+            ofs << '\n' << s3 << '\n';
+            ofs.close();
+
+            std::ifstream ifs("test.txt");
+            String test;
+            ifs >> test;
+            s2 = "";
+            ifs >> s2;
+            EXPECT_EQ(3, test.len());
+            EXPECT_EQ(String("1:5"), test);
+            EXPECT_EQ(11, s3.len());
+            EXPECT_EQ(String("Hello_World"), s2);
+
+            String splitTest("Hello_World_");
+            List<String> l2 = splitTest.split('_');
+            EXPECT_EQ(2, l2.len());
+            EXPECT_EQ(String("Hello"), l2[0]);
+            EXPECT_EQ(String("World"), l2[1]);
+
         } ENDM
 #endif
 
@@ -93,19 +142,26 @@ void run_tests() {
 #endif
 
 #if ALLOMAS_TEST
+    std::ofstream ofs("allomasok.txt");
+
     TEST(Allomas, Constructor) {
         Allomas a1("Budapest");
         EXPECT_STREQ("Budapest", a1.getName().c_str());
 
+        ofs << a1;
+
         Allomas a2(a1);
         EXPECT_STREQ("Budapest", a2.getName().c_str());
+
     } ENDM
 
     TEST(Allomas, addTrain) {
 
-        Allomas a1("Budapest");
+        Allomas a1("Debrecen");
         a1.addTrain(String("123ABC"));
         EXPECT_EQ(1, a1.getTrains().len());
+
+        ofs << a1;
 
     } ENDM
 
@@ -141,20 +197,50 @@ void run_tests() {
     } ENDM
 
     TEST(Allomas, operator[]) {
-        Allomas a1("Budapest");
+        Allomas a1("Szeged");
         a1.addTrain(String("123ABC"));
         a1.addTrain(String("456DEF"));
         a1.addTrain(String("789GHI"));
         EXPECT_EQ(a1[1], String("456DEF"));
+
+        ofs << a1;
     } ENDM
+    ofs.close();
+
+    std::ifstream ifs("allomasok.txt");
+
+    TEST(Allomas, readFromFile)
+        {
+            Allomas a1;
+            ifs >> a1;
+            EXPECT_STREQ("Budapest", a1.getName().c_str());
+            EXPECT_EQ(0, a1.getTrains().len());
+
+            Allomas a2;
+            ifs >> a2;
+            EXPECT_STREQ("Debrecen", a2.getName().c_str());
+            EXPECT_EQ(1, a2.getTrains().len());
+
+            Allomas a3;
+            ifs >> a3;
+            EXPECT_STREQ("Szeged", a3.getName().c_str());
+            EXPECT_EQ(3, a3.getTrains().len());
+
+
+        } ENDM
+        ifs.close();
 #endif
 
 #if VONAT_TEST
+
+    std::ofstream vofs("vonatok.txt");
 
     TEST(Vonat, Constructor) {
         Vonat v1("123ABC", 100);
         EXPECT_STREQ(v1.getID().c_str(), "123ABC");
         EXPECT_EQ(v1.getCapacity(), 100);
+
+        vofs << v1;
 
         Vonat v2(v1);
         EXPECT_STREQ(v2.getID().c_str(), "123ABC");
@@ -162,22 +248,30 @@ void run_tests() {
     } ENDM
 
     TEST(Vonat, addStation) {
-        Vonat v1("123ABC", 100);
+        Vonat v1("567EFG", 100);
         Allomas a1("Budapest");
         Ido i1(12, 30);
         v1.addStation(a1, i1);
         EXPECT_EQ(v1.getStations().len(), 1);
         EXPECT_EQ(v1.getDepartures().len(), 1);
+
+        vofs << v1;
     } ENDM
 
     TEST(Vonat, removeStation) {
-        Vonat v1("123ABC", 100);
-        Allomas a1("Budapest");
+        Vonat v1("789HIJ", 100);
+        Allomas a1("Debrecen");
         Ido i1(12, 30);
         v1.addStation(a1, i1);
+        Allomas a2("Budapest");
+        Ido i2(3, 4);
+        v1.addStation(a2, i2);
+        vofs << v1;
         v1.removeStation(a1);
+        v1.removeStation(a2);
         EXPECT_EQ(v1.getStations().len(), 0);
         EXPECT_EQ(v1.getDepartures().len(), 0);
+
     } ENDM
 
     TEST(Vonat, isStationIn)
@@ -228,10 +322,33 @@ void run_tests() {
         Vonat v1("123ABC", 100);
         std::stringstream ss{};
         ss << v1;
-        EXPECT_STREQ("Train ID: 123ABC\nCapacity: 100\nStations: \n", ss.str().c_str());
+        EXPECT_STREQ("123ABC", ss.str().c_str());
+
+        v1.print();
         
     } ENDM
 
+    vofs.close();
+
+    std::ifstream vifs("vonatok.txt");
+
+    TEST(Vonat, readFromFile){
+        Vonat v1;
+        vifs >> v1;
+        EXPECT_STREQ("123ABC", v1.getID().c_str());
+        EXPECT_EQ(0, v1.getStations().len());
+
+        Vonat v2;
+        vifs >> v2;
+        EXPECT_STREQ("567EFG", v2.getID().c_str());
+        EXPECT_EQ(1, v2.getStations().len());
+
+        Vonat v3;
+        vifs >> v3;
+        EXPECT_STREQ("789HIJ", v3.getID().c_str());
+        EXPECT_EQ(2, v3.getStations().len());
+    } ENDM
+    vifs.close();
 #endif
 
 #if JEGY_TEST
@@ -240,7 +357,7 @@ void run_tests() {
         Vonat v1("123ABC", 100);
         Allomas a1("Budapest");
         Allomas a2("Debrecen");
-        Jegy j1(name, &v1, &a1, &a2, 1, 2);
+        Jegy j1(name, v1, a1, a2, 1, 2);
         EXPECT_STREQ(j1.getName().c_str(), "Test Elek");
         EXPECT_EQ(j1.getTrain() == v1, true);
         EXPECT_EQ(j1.getStartStation() == a1, true);
@@ -249,11 +366,13 @@ void run_tests() {
 
     TEST(Jegy, print) {
         String name("Test Elek");
-        Vonat v1("123", 100);
+        Vonat v1("123ABC", 100);
         Allomas a1("Budapest");
         Allomas a2("Debrecen");
-        Jegy j1(name, &v1, &a1, &a2, 1, 2);
-        j1.print();
+        Jegy j1(name, v1, a1, a2, 1, 2);
+        std::stringstream ss{};
+        j1.print(ss);
+        EXPECT_STREQ("Jegy tulajdonosa: Test Elek\nVonat: 123ABC\nIndulási állomás: Budapest\nVégállomás: Debrecen\nKocsi száma: 1\nSor száma: 2\n", ss.str().c_str());
     } ENDM
 
 #endif
@@ -288,6 +407,14 @@ void run_tests() {
         List<int> l2;
         l2 = l1;
         EXPECT_EQ(l2.len(), 1);
+    } ENDM
+
+#endif
+
+#if MENU_TEST
+
+    TEST(Menu, getChoice){
+
     } ENDM
 
 #endif

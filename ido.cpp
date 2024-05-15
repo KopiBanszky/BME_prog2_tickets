@@ -1,5 +1,22 @@
 #include "ido.h"
 
+Ido::Ido(String str) {
+    List<String> timeStr = str.split(':');
+    if (timeStr.len() != 2) {
+        throw std::invalid_argument("Invalid time");
+    }
+
+    int hour = timeStr[0].toInt();
+    int min = timeStr[1].toInt();
+
+    if (hour < 0 || hour > 23 || min < 0 || min > 59) {
+        throw std::invalid_argument("Invalid time");
+    }
+
+    this->hour = hour;
+    this->min = min;
+}
+
 void Ido::setTime(int hour, int minute) {
     if (hour < 0 || hour > 23 || minute < 0 || minute > 59) {
         throw std::invalid_argument("Invalid time");

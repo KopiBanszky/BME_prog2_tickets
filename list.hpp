@@ -30,7 +30,7 @@ public:
 
         // @brief Postincrement operator
         // @return copy of the iterator
-        iterator operator++(T) {
+        iterator operator++(int) {
             iterator temp = *this;
             if(current != NULL)
             current = current->next;
@@ -42,6 +42,7 @@ public:
         T& operator*() const {
             return current->data;
         }
+
 
         // @brief Equality operator
         // @return true if the iterators point to the same node
@@ -56,6 +57,18 @@ public:
         }
 
     };
+
+    // @brief gives the first element of the list
+    // @return first element
+    iterator begin() {
+        return {head};
+    }
+
+    // @brief gives the end of the list
+    // @return end of the list
+    iterator end() {
+        return {nullptr};
+    }
 
     List() : head(nullptr) {}
 
@@ -191,26 +204,23 @@ public:
         delete temp;
     }
 
-    // @brief gives the first element of the list
-    // @return first element
-    iterator begin() {
-        return {head};
-    }
-
-    // @brief gives the end of the list
-    // @return end of the list
-    iterator end() {
-        return {nullptr};
+    bool contains(const T& data) const {
+        Node* current = head;
+        while (current != nullptr) {
+            if (current->data == data) {
+                return true;
+            }
+            current = current->next;
+        }
+        return false;
     }
 
     // @brief indexer operator
-<<<<<<< HEAD
     // @param index of the element
-=======
-    // @param index index of the element
->>>>>>> 410c9c8468f091ddc297bdf19c3237a91ae0d909
     // @return element at the given index
     T& operator[](size_t index) {
+        if(index >= len())
+            throw std::out_of_range("Index out of range");
         Node* current = head;
         for (size_t i = 0; i < index; i++) {
             current = current->next;
@@ -223,6 +233,8 @@ public:
     // @param index index of the element
     // @return element at the given index
     T& operator[](size_t index) const {
+        if(index >= len())
+            throw std::out_of_range("Index out of range");
         Node* current = head;
         for (size_t i = 0; i < index; i++) {
             current = current->next;

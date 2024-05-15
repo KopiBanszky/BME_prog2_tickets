@@ -7,7 +7,6 @@
 #include "string.h"
 #include "list.hpp"
 #include "allomas.h"
-#include "list.h"
 
 class Vonat {
     String ID; //max length 6
@@ -16,7 +15,9 @@ class Vonat {
     List<Ido> departures;
 
 public:
-    Vonat(String ID, int capacity) : ID(ID), capacity(capacity) {}
+    Vonat() : ID(), capacity(3) {};
+    Vonat(const char* ID, int capacity);
+    Vonat(String ID, int capacity);
     Vonat(const Vonat& other) : ID(other.ID), capacity(other.capacity), stations(other.stations), departures(other.departures) {}
 
     // @brief Getter function for the ID of the train
@@ -26,12 +27,17 @@ public:
     // @brief Getter function for the capacity of the train
     // @return capacity of the train (int)
     int getCapacity() const { return capacity; }
-    void setID(const String& ID) { this->ID = ID; } //TODO: limit length to 6
-    void setCapacity(int capacity) { this->capacity = capacity; }
-    void addStation(const Allomas& station, const Ido& departure) { stations.push_back(station); departures.push_back(departure); }
-    void removeStation(const Allomas& station) { stations.pop(station); } //TODO: remove departure time as well
-    bool isStationIn(const Allomas& station) const { return stations.search(station) != -1; }
+    void setID(const String& ID);
+    void setCapacity(int capacity) { this->capacity = capacity; };
+    void addStation(const Allomas& station, const Ido& departure);
+    void removeStation(const Allomas& station);
+    bool isStationIn(const Allomas& station) const;
+
+    size_t stationIndex(const Allomas& station) const;
+
+
     const List<Allomas>& getStations() const { return stations; }
+    List<Allomas>& getStations() { return stations; }
 
     // @brief getter function for the list of departures
     // @return list of departures (List<Ido>)
@@ -86,11 +92,12 @@ public:
         return *this;
     }
 
+    void print(std::ostream& os = std::cout) const;
 
 };
-std::ostream& operator<<(std::ostream& os, const Vonat& vonat) {
-    os << vonat.getID();
-    return os;
-}
+std::ostream& operator<<(std::ostream& os, const Vonat& vonat);
+std::ofstream& operator<<(std::ofstream& ofs, const Vonat& vonat);
+std::ifstream& operator>>(std::ifstream& ifs, Vonat& vonat);
+std::istream& operator>>(std::istream& is, Vonat& vonat);
 
 #endif //BME_PROG2_TICKETS_VONAT_H

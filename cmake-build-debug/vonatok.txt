@@ -1,0 +1,4 @@
+123ABC.100-
+567EFG.100-Budapest_12:30;
+789HIJ.100-Debrecen_12:30;Budapest_03:04;
+312gjj.7-

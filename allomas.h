@@ -11,11 +11,18 @@ class Allomas{
     List<String> trainsID;
 
 public:
+    Allomas() : name() {}
     Allomas(const String& name) : name(name) {}
 
     // @brief Getter function for the name of the station
     // @return name of the station
     const String& getName() const { return name; }
+
+    // @brief Setter function for the name of the station
+    // @param name of the station
+    void setName(const String& name) { this->name = name; }
+
+    void setName(const char* name) { this->name = name; }
 
     // @brief Getter function for the trains that stop at the station
     // @return list of train IDs
@@ -49,28 +56,15 @@ public:
     // @return void
     void print() const;
 
-    // @brief prints the station's name to the output stream
-    // @param os output stream
-    // @param allomas station
-    // @return output stream
-    friend std::ostream& operator<<(std::ostream& os, const Allomas& allomas) {
-        os << allomas.getName();
-        return os;
-    }
-
     // @brief equality operator, compares the names of the stations
     // @param rhs station
     // @return true if the names are equal, false otherwise
-    bool operator==(const Allomas& rhs) const {
-        return name == rhs.name;
-    }
+    bool operator==(const Allomas& rhs) const;
 
     // @brief inequality operator, compares the names of the stations
     // @param rhs station
     // @return true if the names are not equal, false otherwise
-    bool operator!=(const Allomas& rhs) const {
-        return !(rhs == *this);
-    }
+    bool operator!=(const Allomas& rhs) const;
 
     // @brief indexer operator
     // @param index index of the train
