@@ -2,6 +2,9 @@
 #include "test.hpp"
 #include "menu.h"
 #include "vonat.h"
+#include "vonat_kezeles.h"
+#include "allomas_kezeles.h"
+#include "jegy_kezeles.h"
 
 //TODO: DELEGATE DEFINITIONS TO .CPP FILES
 
@@ -23,9 +26,11 @@ int main() {
             Allomas allomas;
             ifs2 >> allomas;
             stations.push_back(allomas);
-            std::cout << allomas << std::endl;
         }
         ifs2.close();
+        if(stations[stations.len() - 1] == Allomas()) {
+            stations.pop();
+        }
     }
 
     std::ifstream ifs("vonatok.txt");
@@ -36,15 +41,10 @@ int main() {
                 Vonat vonat;
                 ifs >> vonat;
                 trains.push_back(vonat);
-                std::cout << vonat << std::endl;
             }
             catch (const char* msg) {
                 std::cout << msg << std::endl;
             }
-            /*Vonat vonat;
-            ifs >> vonat;
-            trains.push_back(vonat);
-            std::cout << vonat << std::endl;*/
         }
         ifs.close();
     }
@@ -70,29 +70,41 @@ int main() {
     main_menu.print();
     char choice = main_menu.getChoice();
 
-    switch (choice) {
-        case 'j':
-            std::cout << "Jegyvasarlas" << std::endl;
-            break;
-        case 'n':
-            std::cout << "Vonat felvetele" << std::endl;
-            std::for_each(trains.begin(), trains.end(), [](Vonat& vonat) { std::cout << vonat << std::endl; });
-            break;
-        case 's':
-            std::ofstream openFile("vonatok.txt", std::ios::app);
-            if(openFile.is_open()) {
-                Vonat vonat;
-                try {
-                    std::cin >> vonat;
+    if(choice == 'j') {
+        InputManage<Jegy> *jegyKezeles = new Jegy_kezeles(trains, stations);
+        Jegy jegy = jegyKezeles->getUserData();
+        jegy.print();
+        delete jegyKezeles;
+    }
+    else if(choice == 's') {
+        InputManage<Allomas> *allomasKezeles = new AllomasKezeles(trains, stations);
+        Allomas allomas = allomasKezeles->getUserData();
+        stations.push_back(allomas);
+        allomas.print();
+        delete allomasKezeles;
+    } else if (choice == 'n') {
+        try {
+            InputManage<Vonat>* kezeles = new VonatKezeles(trains, stations);
+            Vonat vonat = kezeles->getUserData();
+            trains.push_back(vonat);
+            vonat.print(std::cout);
+            delete kezeles;
+        } catch (const char* msg) {
+            std::cout << msg << std::endl;
+        }
+    } else {
+        std::cout << "Hibas input" << std::endl;
+    }
 
-                } catch (const char* msg) {
-                    std::cout << msg << std::endl;
-                    std::cin >> vonat;
-                }
-                openFile << vonat;
-                openFile.close();
-            }
-            break;
+    std::ofstream ofs("vonatok.txt");
+    for(auto i = trains.begin(); i != trains.end(); ++i) {
+        ofs << *i;
+    }
+    ofs.close();
+
+    std::ofstream ofs2("allomasok.txt");
+    for(auto i = stations.begin(); i != stations.end(); ++i) {
+        ofs2 << *i;
     }
 
 #endif

@@ -108,12 +108,30 @@ std::ifstream& operator>>(std::ifstream& ifs, Vonat& vonat){
 std::istream& operator>>(std::istream& is, Vonat& vonat) {
     String ID;
     int capacity;
-    is >> ID;
-    if(ID.len() != 6) {
-        throw "ID must be 6 characters long";
+    bool err = true;
+    while(err){
+        try {
+            is >> ID;
+            if(ID.len() != 6) {
+                throw "ID must be 6 characters long";
+            }
+        }
+        catch (std::invalid_argument& e) {
+            err  = false;
+        }
     }
     std::cout << "Kapacitas: ";
-    is >> capacity;
+    String helper;
+    err = true;
+    while(err){
+        try {
+            is >> helper;
+            capacity = helper.toInt();
+        }
+        catch (std::invalid_argument& e) {
+            err  = false;
+        }
+    }
     vonat.setID(ID);
     vonat.setCapacity(capacity);
     return is;

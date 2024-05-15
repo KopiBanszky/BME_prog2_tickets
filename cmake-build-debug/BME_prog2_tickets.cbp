@@ -88,7 +88,10 @@
 		<Unit filename="C:/Kopi/programok/BME/NHF/allomas.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
-		<Unit filename="C:/Kopi/programok/BME/NHF/allomas_felvetel.h">
+		<Unit filename="C:/Kopi/programok/BME/NHF/allomas_kezeles.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/exeptions.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/gtest_lite.h">
@@ -100,10 +103,16 @@
 		<Unit filename="C:/Kopi/programok/BME/NHF/ido.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/input_manage.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/jegy.cpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/jegy.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/jegy_kezeles.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/list.hpp">

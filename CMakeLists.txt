@@ -22,4 +22,8 @@ add_executable(BME_prog2_tickets main.cpp
         seriazible.h
         jegy.cpp
         string.cpp
-        vonat_kezeles.h)
+        vonat_kezeles.h
+        input_manage.h
+        jegy_kezeles.h
+        exeptions.h
+)

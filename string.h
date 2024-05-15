@@ -38,6 +38,24 @@ public:
         return length;
     }
 
+    String& toLowerCase() {
+        for (size_t i = 0; i < length; i++) {
+            if (data[i] >= 'A' && data[i] <= 'Z') {
+                data[i] += 32;
+            }
+        }
+        return *this;
+    }
+
+    String& toUpperCase() {
+        for (size_t i = 0; i < length; i++) {
+            if (data[i] >= 'a' && data[i] <= 'z') {
+                data[i] -= 32;
+            }
+        }
+        return *this;
+    }
+
     // @brief cpy operator
     // @param other string to copy
     // @return reference to the new string

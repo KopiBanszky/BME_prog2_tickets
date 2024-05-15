@@ -27,6 +27,7 @@ public:
     // @brief Getter function for the trains that stop at the station
     // @return list of train IDs
     const List<String>& getTrains() const { return trainsID; }
+    List<String>& getTrains() { return trainsID; }
 
     // @brief Adds a train to the list of trains that stop at the station
     // @param trainID ID of the train (String)
@@ -36,10 +37,10 @@ public:
     // @param trainID ID of the train (String)
     void removeTrain(const String& trainID);
 
-    // @brief searches for a match in the name of the station
-    // @param name of the station (String)
+    // @brief searches for a match in the arg of the station
+    // @param arg of the station (String)
     // @return index of the match
-    int search(const String& name) const;
+    size_t search(const String& arg) const;
 
     // @brief searches for a train that stops at the station
     // @param time departure time of the train (Ido)

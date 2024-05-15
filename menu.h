@@ -43,6 +43,7 @@ public:
         return choice;
     }
 
+
     Menu& operator=(const Menu& other) {
         options = other.options;
         hotkeys = other.hotkeys;

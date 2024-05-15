@@ -1,16 +1,17 @@
 #include "ido.h"
+#include "exeptions.h"
 
 Ido::Ido(String str) {
     List<String> timeStr = str.split(':');
     if (timeStr.len() != 2) {
-        throw std::invalid_argument("Invalid time");
+        throw Exeption("Invalid time");
     }
 
     int hour = timeStr[0].toInt();
     int min = timeStr[1].toInt();
 
     if (hour < 0 || hour > 23 || min < 0 || min > 59) {
-        throw std::invalid_argument("Invalid time");
+        throw Exeption("Invalid time");
     }
 
     this->hour = hour;
@@ -19,7 +20,7 @@ Ido::Ido(String str) {
 
 void Ido::setTime(int hour, int minute) {
     if (hour < 0 || hour > 23 || minute < 0 || minute > 59) {
-        throw std::invalid_argument("Invalid time");
+        throw Exeption("Invalid time");
     }
 
     this->hour = hour;
@@ -28,7 +29,7 @@ void Ido::setTime(int hour, int minute) {
 
 void Ido::setHour(int hour) {
     if (hour < 0 || hour > 23) {
-        throw std::invalid_argument("Invalid time");
+        throw Exeption("Invalid time");
     }
 
     this->hour = hour;
@@ -36,7 +37,7 @@ void Ido::setHour(int hour) {
 
 void Ido::setMin(int min) {
     if (min < 0 || min > 59) {
-        throw std::invalid_argument("Invalid time");
+        throw Exeption("Invalid time");
     }
 
     this->min = min;

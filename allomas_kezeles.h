@@ -5,16 +5,13 @@
 #ifndef BME_PROG2_TICKETS_ALLOMAS_KEZELES_H
 #define BME_PROG2_TICKETS_ALLOMAS_KEZELES_H
 
-#include "allomas.h"
-#include "vonat.h"
-#include "list.hpp"
+#include "input_manage.h"
 
-class AllomasKezeles : public Allomas{
-    List<Allomas>& stations;
+class AllomasKezeles : public InputManage<Allomas>, public Allomas{
 public:
-    AllomasKezeles(List<Allomas>& stations) : stations(stations) {}
+    AllomasKezeles(List<Vonat>& trains ,List<Allomas>& stations) : InputManage<Allomas>(trains, stations) {}
 
-    Allomas getStationFromUser() {
+    Allomas getUserData() override {
         Allomas station;
         std::cout << "Adja meg az allomas nevet: ";
         std::cin >> station;

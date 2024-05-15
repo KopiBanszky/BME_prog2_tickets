@@ -139,6 +139,29 @@ public:
         delete temp;
     }
 
+    size_t index(const T& data) {
+        Node* current = head;
+        size_t index = 0;
+        while (current != nullptr) {
+            if (current->data == data) {
+                return index;
+            }
+            current = current->next;
+            index++;
+        }
+        return -1;
+    }
+
+    void clear() {
+        Node* current = head;
+        while (current != nullptr) {
+            Node* next = current->next;
+            delete current;
+            current = next;
+        }
+        head = nullptr;
+    }
+
     // @brief Removes the last element of the list
     void pop() {
         if (head == nullptr) {

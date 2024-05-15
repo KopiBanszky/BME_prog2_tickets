@@ -1,16 +1,32 @@
 #include "allomas.h"
 
-int Allomas::search(const String& name) const {
-    for(size_t i = name.len(); i >= 4; --i) {
-        for (size_t j = 0; j < this->name.len(); ++j){
-            if (name.str_part(0, j) == this->name.str_part(i, i+j))
+size_t Allomas::search(const String& arg) const {
+    if(arg == name) {
+        return 0;
+    }
+    if(arg.len() < 4) {
+        return -1;
+    }
+    if(name.len() < 4) {
+        return -1;
+    }
+
+    for(size_t i = arg.len(); i >= 4; --i) {
+        for (size_t j = 0; j < name.len(); ++j){
+            String temp = arg.str_part(0, i).toLowerCase();
+            String temp2 = name.str_part(j, j + i).toLowerCase();
+            if (temp == temp2) {
                 return j;
-            else if(name.str_part(name.len()-j, name.len()) == this->name.str_part(i, i+j))
+            }
+            temp = arg.str_part(arg.len() - i, arg.len()).toLowerCase();
+            temp2 = name.str_part(j, j + i).toLowerCase();
+            if(temp == temp2){
                 return j;
+            }
         }
     }
 
-    return 0;
+    return -1;
 }
 
 void Allomas::addTrain(const String& trainID) {
@@ -76,17 +92,21 @@ std::ifstream& operator>>(std::ifstream& ifs, Allomas& allomas) {
 
 std::istream& operator>>(std::istream& is, Allomas& allomas) {
     String temp;
-    is >> temp;
-    allomas.setName(temp);
-    /* Nem tudom miért csináltam ezt meg
-    List<String> stations;
-    is >> temp;
-    while (!temp.isEmpty()) {
-        stations.push_back(temp);
-        is >> temp;
+    bool error = false;
+    while (!error) {
+        try {
+            is >> temp;
+            if (temp == "-") {
+                break;
+            }
+            if (temp == "\n") {
+                error = true;
+                break;
+            }
+        } catch (const char* msg) {
+            error = true;
+        }
     }
-    for(auto i = stations.begin(); i != stations.end(); ++i) {
-        allomas.addTrain(*i);
-    } */
+    allomas.setName(temp);
     return is;
 }

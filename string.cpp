@@ -45,7 +45,6 @@ std::ifstream &operator>>(std::ifstream &ifs, String &str) {
         buffer[i] = c;
         i++;
     }
-    std::cout << "String: " << str << std::endl;
     return ifs;
 }
 
@@ -60,8 +59,10 @@ std::istream &operator>>(std::istream &is, String &str) {
     is.setf(std::ios_base::skipws);            // az elején eldobjuk a ws-t
     while (is >> ch) {
         is.unsetf(std::ios_base::skipws);    // utána pedig már nem
-        if (isspace(ch)) {
+        if (isspace(ch) || is.eof() || is.fail() || is.bad() || ch == '\0' || ch == '\r' || ch==EOF){
+
             is.putback(ch);             // na ezt nem kérjük
+            if(ch == '\n' || ch == '\r' || ch == EOF) throw std::invalid_argument("End of line");
             break;
         } else {
             str += ch;               // végére fűzzük a karaktert
