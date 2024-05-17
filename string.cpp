@@ -59,10 +59,8 @@ std::istream &operator>>(std::istream &is, String &str) {
     is.setf(std::ios_base::skipws);            // az elején eldobjuk a ws-t
     while (is >> ch) {
         is.unsetf(std::ios_base::skipws);    // utána pedig már nem
-        if (isspace(ch) || is.eof() || is.fail() || is.bad() || ch == '\0' || ch == '\r' || ch==EOF){
-
+        if (isspace(ch)){
             is.putback(ch);             // na ezt nem kérjük
-            if(ch == '\n' || ch == '\r' || ch == EOF) throw std::invalid_argument("End of line");
             break;
         } else {
             str += ch;               // végére fűzzük a karaktert
@@ -72,3 +70,20 @@ std::istream &operator>>(std::istream &is, String &str) {
     return is;
 }
 
+std::istream& String::getLine(std::istream& is) {
+    char ch;
+    *this = String("");            // üres string, ehhez fűzünk hozzá
+    std::ios_base::fmtflags fl = is.flags(); // eltesszük a régi flag-eket
+    is.setf(std::ios_base::skipws);            // az elején eldobjuk a ws-t
+    while (is >> ch) {
+        is.unsetf(std::ios_base::skipws);    // utána pedig már nem
+        if (ch == '\n'){
+            break;
+        } else {
+            *this += ch;               // végére fűzzük a karaktert
+        }
+    }
+    is.setf(fl);                        // visszaállítju
+
+    return is;
+}

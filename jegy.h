@@ -42,19 +42,7 @@ public:
     int getSeatNumber() const { return seatNumber; }
 
     // @brief prints the ticket's owner, the train, the start and final stations, the car number and the seat number
-    void print(std::ostream& os = std::cout) const {
-        try {
-            os << "Jegy tulajdonosa: " << name << std::endl;
-            os << "Vonat: " << train << std::endl;
-            os << "Indulási állomás: " << startStation.getName() << std::endl;
-            os << "Végállomás: " << finalStation.getName() << std::endl;
-            os << "Kocsi száma: " << carNumber << std::endl;
-            os << "Sor száma: " << seatNumber << std::endl;
-        }
-        catch (const char* msg) {
-            os << msg << std::endl;
-        }
-    }
+    void print(std::ostream& os = std::cout) const;
 
 };
 

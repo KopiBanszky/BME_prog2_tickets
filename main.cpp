@@ -4,7 +4,7 @@
 #include "vonat.h"
 #include "vonat_kezeles.h"
 #include "allomas_kezeles.h"
-#include "jegy_kezeles.h"
+#include "jegy_kezeles.hpp"
 
 //TODO: DELEGATE DEFINITIONS TO .CPP FILES
 
@@ -66,34 +66,35 @@ int main() {
     main_menu.addOption("Jegyvasarlas", 'j');
     main_menu.addOption("Vonat felvetele", 'n');
     main_menu.addOption("Allomas felvetele", 's');
+    main_menu.addOption("Kilepes", 'q');
 
     main_menu.print();
     char choice = main_menu.getChoice();
-
-    if(choice == 'j') {
-        InputManage<Jegy> *jegyKezeles = new Jegy_kezeles(trains, stations);
-        Jegy jegy = jegyKezeles->getUserData();
-        jegy.print();
-        delete jegyKezeles;
-    }
-    else if(choice == 's') {
-        InputManage<Allomas> *allomasKezeles = new AllomasKezeles(trains, stations);
-        Allomas allomas = allomasKezeles->getUserData();
-        stations.push_back(allomas);
-        allomas.print();
-        delete allomasKezeles;
-    } else if (choice == 'n') {
-        try {
+    bool running = true;
+    while (running) {
+        if(choice == 'j') {
+            InputManage<Jegy> *jegyKezeles = new Jegy_kezeles(trains, stations);
+            Jegy jegy = jegyKezeles->getUserData();
+            jegy.print();
+            delete jegyKezeles;
+        } else if(choice == 's') {
+            InputManage<Allomas> *allomasKezeles = new AllomasKezeles(trains, stations);
+            Allomas allomas = allomasKezeles->getUserData();
+            stations.push_back(allomas);
+            allomas.print();
+            delete allomasKezeles;
+        } else if (choice == 'n') {
             InputManage<Vonat>* kezeles = new VonatKezeles(trains, stations);
             Vonat vonat = kezeles->getUserData();
             trains.push_back(vonat);
             vonat.print(std::cout);
             delete kezeles;
-        } catch (const char* msg) {
-            std::cout << msg << std::endl;
+        } else if(choice == 'q') {
+            running = false;
+            break;
+        } else {
+            std::cout << "Hibas input" << std::endl;
         }
-    } else {
-        std::cout << "Hibas input" << std::endl;
     }
 
     std::ofstream ofs("vonatok.txt");

@@ -24,6 +24,11 @@ add_executable(BME_prog2_tickets main.cpp
         string.cpp
         vonat_kezeles.h
         input_manage.h
-        jegy_kezeles.h
-        exeptions.h
+        jegy_kezeles.hpp
+        allomas_test.hpp
+        ido_test.hpp
+        list_test.hpp
+        string_test.hpp
+        vonat_test.hpp
+        jegy_test.hpp
 )

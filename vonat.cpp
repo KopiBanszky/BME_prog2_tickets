@@ -112,26 +112,27 @@ std::istream& operator>>(std::istream& is, Vonat& vonat) {
     while(err){
         try {
             is >> ID;
+            err = false;
             if(ID.len() != 6) {
                 throw "ID must be 6 characters long";
             }
         }
         catch (std::invalid_argument& e) {
-            err  = false;
+            err  = true;
         }
     }
     std::cout << "Kapacitas: ";
-    String helper;
     err = true;
     while(err){
         try {
-            is >> helper;
-            capacity = helper.toInt();
+            is >> capacity;
+            err = false;
         }
         catch (std::invalid_argument& e) {
-            err  = false;
+            err  = true;
         }
     }
+
     vonat.setID(ID);
     vonat.setCapacity(capacity);
     return is;

@@ -243,6 +243,8 @@ public:
         return result;
     }
 
+
+    std::istream& getLine(std::istream& is = std::cin);
 };
 
 std::ostream &operator<<(std::ostream &os, const String &str);

@@ -43,11 +43,6 @@ public:
     size_t search(const String& arg) const;
 
     // @brief searches for a train that stops at the station
-    // @param time departure time of the train (Ido)
-    // @return index of the train
-//    int findTrain(const Ido& time) const;
-
-    // @brief searches for a train that stops at the station
     // @param ID of the train (String)
     // @return index of the train
     int findTrain(const String& ID) const;
@@ -82,9 +77,16 @@ public:
     }
 };
 
+// @brief prints the station's name
 std::ostream& operator<<(std::ostream& os, const Allomas& allomas);
+
+// @brief prints the station's name and the train ids to a file. Format: name-train1,train2,train3
 std::ofstream& operator<<(std::ofstream& ofs, const Allomas& allomas);
+
+// @brief reads the station's name from the input stream
 std::istream& operator>>(std::istream& is, Allomas& allomas);
+
+// @brief reads the station's name and the train ids from a file. Format like ifsoutput
 std::ifstream& operator>>(std::ifstream& ifs, Allomas& allomas);
 
 #endif //BME_PROG2_TICKETS_ALLOMAS_H

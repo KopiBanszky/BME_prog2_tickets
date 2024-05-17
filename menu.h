@@ -10,7 +10,7 @@
 
 //@brief Menu class
 //@details A class that represents a menu with options and hotkeys, it can be printed and the user can choose an option
-class Menu {
+class Menu{
     List<String> options;
     List<char> hotkeys;
     String title;
@@ -26,27 +26,26 @@ public:
     }
 
     // @brief prints the menu to the console
-    void print() const {
+    void print(std::ostream& os = std::cout) const {
 
-        std::cout << "\n\n" << title << "\n" << std::endl;
+        os << "\n\n" << title << "\n" << std::endl;
         for (int i = 0; i < options.len(); i++) {
-            std::cout << '[' << hotkeys[i] << "] - " << options[i] << std::endl;
+            os << '[' << hotkeys[i] << "] - " << options[i] << std::endl;
         }
-        std::cout << std::endl;
+        os << std::endl;
     }
 
     // @brief gets the choice of the user, gets the last character from the input before enter
     // @return the hotkey of the chosen option
-    char getChoice() const {
+    char getChoice(std::istream& is = std::cin) const {
         char choice;
-        std::cin >> choice;
+        is >> choice;
         return choice;
     }
 
 
     Menu& operator=(const Menu& other) {
         options = other.options;
-        hotkeys = other.hotkeys;
         title = other.title;
         return *this;
     }

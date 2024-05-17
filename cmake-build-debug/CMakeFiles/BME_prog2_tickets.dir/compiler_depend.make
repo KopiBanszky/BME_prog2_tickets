@@ -306,7 +306,6 @@ CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj: C:/Kopi/programok/BME/NHF/ido.cpp 
   C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/x86_64-w64-mingw32/include/vadefs.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/x86_64-w64-mingw32/include/wchar.h \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
-  C:/Kopi/programok/BME/NHF/exeptions.h \
   C:/Kopi/programok/BME/NHF/ido.h \
   C:/Kopi/programok/BME/NHF/list.hpp \
   C:/Kopi/programok/BME/NHF/string.h
@@ -683,18 +682,24 @@ CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj: C:/Kopi/programok/BME/NHF/main.cp
   C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/x86_64-w64-mingw32/include/wctype.h \
   C:/Kopi/programok/BME/NHF/allomas.h \
   C:/Kopi/programok/BME/NHF/allomas_kezeles.h \
+  C:/Kopi/programok/BME/NHF/allomas_test.hpp \
   C:/Kopi/programok/BME/NHF/gtest_lite.h \
   C:/Kopi/programok/BME/NHF/ido.h \
+  C:/Kopi/programok/BME/NHF/ido_test.hpp \
   C:/Kopi/programok/BME/NHF/input_manage.h \
   C:/Kopi/programok/BME/NHF/jegy.h \
-  C:/Kopi/programok/BME/NHF/jegy_kezeles.h \
+  C:/Kopi/programok/BME/NHF/jegy_kezeles.hpp \
+  C:/Kopi/programok/BME/NHF/jegy_test.hpp \
   C:/Kopi/programok/BME/NHF/list.hpp \
+  C:/Kopi/programok/BME/NHF/list_test.hpp \
   C:/Kopi/programok/BME/NHF/memtrace.h \
   C:/Kopi/programok/BME/NHF/menu.h \
   C:/Kopi/programok/BME/NHF/string.h \
+  C:/Kopi/programok/BME/NHF/string_test.hpp \
   C:/Kopi/programok/BME/NHF/test.hpp \
   C:/Kopi/programok/BME/NHF/vonat.h \
-  C:/Kopi/programok/BME/NHF/vonat_kezeles.h
+  C:/Kopi/programok/BME/NHF/vonat_kezeles.h \
+  C:/Kopi/programok/BME/NHF/vonat_test.hpp
 
 CMakeFiles/BME_prog2_tickets.dir/memtrace.cpp.obj: C:/Kopi/programok/BME/NHF/memtrace.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h \
@@ -1215,8 +1220,6 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h:
 
-C:/Kopi/programok/BME/NHF/jegy_kezeles.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/fstream:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list:
@@ -1286,6 +1289,8 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32
 C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h:
+
+C:/Kopi/programok/BME/NHF/vonat_test.hpp:
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h:
 
@@ -1387,8 +1392,6 @@ C:/Kopi/programok/BME/NHF/string.h:
 
 C:/Kopi/programok/BME/NHF/ido.cpp:
 
-C:/Kopi/programok/BME/NHF/exeptions.h:
-
 C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocated_ptr.h:
 
 C:/Kopi/programok/BME/NHF/jegy.cpp:
@@ -1489,11 +1492,23 @@ C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/x86_64-w64-mingw32/include
 
 C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/x86_64-w64-mingw32/include/stdint.h:
 
+C:/Kopi/programok/BME/NHF/allomas_test.hpp:
+
 C:/Kopi/programok/BME/NHF/gtest_lite.h:
+
+C:/Kopi/programok/BME/NHF/ido_test.hpp:
 
 C:/Kopi/programok/BME/NHF/input_manage.h:
 
+C:/Kopi/programok/BME/NHF/jegy_kezeles.hpp:
+
+C:/Kopi/programok/BME/NHF/jegy_test.hpp:
+
+C:/Kopi/programok/BME/NHF/list_test.hpp:
+
 C:/Kopi/programok/BME/NHF/menu.h:
+
+C:/Kopi/programok/BME/NHF/string_test.hpp:
 
 C:/Kopi/programok/BME/NHF/test.hpp:
 

@@ -264,6 +264,19 @@ public:
         }
         return current->data;
     };
+
+    // @brief assignment operator
+    // @param other list to be assigned
+    // @return reference to the list
+    List& operator=(const List& other) {
+        clear();
+        Node* current = other.head;
+        while (current != nullptr) {
+            push_back(current->data);
+            current = current->next;
+        }
+        return *this;
+    }
 };
 
 #endif //BME_PROG2_TICKETS_LIST_HPP

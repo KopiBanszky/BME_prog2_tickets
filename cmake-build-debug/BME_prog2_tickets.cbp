@@ -91,7 +91,7 @@
 		<Unit filename="C:/Kopi/programok/BME/NHF/allomas_kezeles.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
-		<Unit filename="C:/Kopi/programok/BME/NHF/exeptions.h">
+		<Unit filename="C:/Kopi/programok/BME/NHF/allomas_test.hpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/gtest_lite.h">
@@ -103,6 +103,9 @@
 		<Unit filename="C:/Kopi/programok/BME/NHF/ido.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/ido_test.hpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/input_manage.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
@@ -112,10 +115,16 @@
 		<Unit filename="C:/Kopi/programok/BME/NHF/jegy.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
-		<Unit filename="C:/Kopi/programok/BME/NHF/jegy_kezeles.h">
+		<Unit filename="C:/Kopi/programok/BME/NHF/jegy_kezeles.hpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/jegy_test.hpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/list.hpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/list_test.hpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/main.cpp">
@@ -139,6 +148,9 @@
 		<Unit filename="C:/Kopi/programok/BME/NHF/string.h">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/string_test.hpp">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/test.hpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
@@ -149,6 +161,9 @@
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/vonat_kezeles.h">
+			<Option target="BME_prog2_tickets"/>
+		</Unit>
+		<Unit filename="C:/Kopi/programok/BME/NHF/vonat_test.hpp">
 			<Option target="BME_prog2_tickets"/>
 		</Unit>
 		<Unit filename="C:/Kopi/programok/BME/NHF/CMakeLists.txt">

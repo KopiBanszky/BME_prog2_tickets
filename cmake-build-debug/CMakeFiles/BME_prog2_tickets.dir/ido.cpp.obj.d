@@ -150,4 +150,4 @@ CMakeFiles/BME_prog2_tickets.dir/ido.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/x86_64-w64-mingw32/include/string.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/x86_64-w64-mingw32/include/sec_api/string_s.h \
- C:\Kopi\programok\BME\NHF\list.hpp C:\Kopi\programok\BME\NHF\exeptions.h
+ C:\Kopi\programok\BME\NHF\list.hpp

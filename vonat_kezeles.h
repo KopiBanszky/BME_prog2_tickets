@@ -49,13 +49,34 @@ public:
         }
         std::cout << "\nAdja meg a vonat allomasait (0-vegig, -1: mentes): " << std::endl;
         int index;
-        while(index != -1) {
+        List<int> used;
 
+        while(index != -1) {
+            std::cin >> index;
+            if(index == -1) {
+                break;
+            }
+            if(used.contains(index)) {
+                std::cout << "Ez az allomas mar szerepel, adjon meg egy masikat: ";
+                continue;
+            }
             Ido time;
-            std::cout << "Adja meg az indulas idejet (hh:mm): " << index;
-            std::cin >> time;
+            std::cout << "Adja meg az indulas idejet (hh:mm): ";
+            try {
+                std::cin >> time;
+            } catch (std::invalid_argument& e) {
+                std::cout << "Hibas input, probalja ujra! " << std::endl;
+                continue;
+            }
             std::cout << time << std::endl;
-            train.addStation(InputManage<Vonat>::stations[index], time);
+            try {
+                train.addStation(InputManage<Vonat>::stations[index], time);
+                used.push_back(index);
+            } catch (std::out_of_range& e) {
+                std::cout << "Hibas input, probalja ujra! " << std::endl;
+                continue;
+
+            }
             std::cout << "Kovetkezo allomas: ";
         }
 

@@ -198,16 +198,19 @@ CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/regex.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/regex_executor.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/regex_executor.tcc \
+ C:\Kopi\programok\BME\NHF\memtrace.h C:\Kopi\programok\BME\NHF\menu.h \
  C:\Kopi\programok\BME\NHF\string.h C:\Kopi\programok\BME\NHF\list.hpp \
- C:\Kopi\programok\BME\NHF\ido.h \
+ C:\Kopi\programok\BME\NHF\string_test.hpp \
+ C:\Kopi\programok\BME\NHF\ido_test.hpp C:\Kopi\programok\BME\NHF\ido.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip \
- C:\Kopi\programok\BME\NHF\allomas.h C:\Kopi\programok\BME\NHF\vonat.h \
- C:\Kopi\programok\BME\NHF\jegy.h C:\Kopi\programok\BME\NHF\memtrace.h \
- C:\Kopi\programok\BME\NHF\menu.h \
- C:\Kopi\programok\BME\NHF\vonat_kezeles.h \
- C:\Kopi\programok\BME\NHF\input_manage.h \
+ C:\Kopi\programok\BME\NHF\allomas_test.hpp \
  C:\Kopi\programok\BME\NHF\allomas_kezeles.h \
- C:\Kopi\programok\BME\NHF\jegy_kezeles.h \
+ C:\Kopi\programok\BME\NHF\input_manage.h \
+ C:\Kopi\programok\BME\NHF\vonat.h C:\Kopi\programok\BME\NHF\allomas.h \
+ C:\Kopi\programok\BME\NHF\vonat_test.hpp \
+ C:\Kopi\programok\BME\NHF\vonat_kezeles.h \
+ C:\Kopi\programok\BME\NHF\jegy_test.hpp C:\Kopi\programok\BME\NHF\jegy.h \
+ C:\Kopi\programok\BME\NHF\jegy_kezeles.hpp \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/random \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdint.h \
@@ -222,4 +225,5 @@ CMakeFiles/BME_prog2_tickets.dir/main.cpp.obj: \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/mwaitintrin.h \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/random.tcc \
  C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric \
- C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h
+ C:/Program\ Files/JetBrains/CLion\ 2023.3.3/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_numeric.h \
+ C:\Kopi\programok\BME\NHF\list_test.hpp

@@ -4,11 +4,12 @@ size_t Allomas::search(const String& arg) const {
     if(arg == name) {
         return 0;
     }
-    if(arg.len() < 4) {
-        return -1;
+    if(arg.len() < 4 && name.len() < 4) {
+        return 0;
     }
-    if(name.len() < 4) {
-        return -1;
+
+    if(arg.len() < 4){
+        throw std::invalid_argument("Too short argument");
     }
 
     for(size_t i = arg.len(); i >= 4; --i) {
@@ -92,21 +93,7 @@ std::ifstream& operator>>(std::ifstream& ifs, Allomas& allomas) {
 
 std::istream& operator>>(std::istream& is, Allomas& allomas) {
     String temp;
-    bool error = false;
-    while (!error) {
-        try {
-            is >> temp;
-            if (temp == "-") {
-                break;
-            }
-            if (temp == "\n") {
-                error = true;
-                break;
-            }
-        } catch (const char* msg) {
-            error = true;
-        }
-    }
+    temp.getLine();
     allomas.setName(temp);
     return is;
 }
